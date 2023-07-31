@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Spotify Artist</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'><link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.3.0/nouislider.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="header">
+
+  <!--
+  <div class="window__actions">
+    <i class="ion-record red"></i>
+    <i class="ion-record yellow"></i>
+    <i class="ion-record green"></i>
+  </div>
+  -->
+  
+  <div class="page-flows">
+  
+    <span class="flow">
+      <i class="ion-chevron-left"></i>
+    </span>
+    
+    <span class="flow">
+      <i class="ion-chevron-right disabled"></i>
+    </span>
+    
+  </div>
+  
+  <div class="search">
+  
+    <input type="text" placeholder="Search" />
+    
+  </div>
+  
+  <div class="user">
+  
+    <div class="user__notifications">
+    
+      <i class="ion-android-notifications"></i>
+      
+    </div>
+    
+    <div class="user__inbox">
+    
+      <i class="ion-archive"></i>
+      
+    </div>
+    
+    <div class="user__info">
+    
+      <span class="user__info__img">
+      
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/adam_proPic.jpg" alt="Profile Picture" class="img-responsive" />
+        
+      </span>
+      
+      <span class="user__info__name">
+      
+        <span class="first">Pablo</span>
+        
+        <span class="last">Caio</span>
+        
+      </span>
+      
+    </div>
+    
+    <div class="user__actions">
+    
+      <div class="dropdown">
+        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <i class="ion-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Sessão Privada</a></li>
+          <li><a href="#">Conta</a></li>
+          <li><a href="#">Configurações</a></li>
+          <li><a href="#">Sair</a></li>
+        </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</section>
+
+<section class="content">
+
+  <div class="content__left">
+  
+    <section class="navigation">
+
+        <!-- Main -->
+        <div class="navigation__list">
+
+          <div class="navigation__list__header" 
+               role="button" 
+               data-toggle="collapse" 
+               href="#main" 
+               aria-expanded="true" 
+               aria-controls="main">
+            Main
+          </div>
+          
+          <div class="collapse in" id="main">
+          
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-browsers"></i>
+              <span>Pesquisar</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-person-stalker"></i>
+              <span>Atividades</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-radio-waves"></i>
+              <span>Radio</span>
+            </a>
+            
+          </div>
+
+        </div>
+        <!-- / -->
+
+        <!-- Your Music -->
+        <div class="navigation__list">
+
+          <div class="navigation__list__header" 
+               role="button" 
+               data-toggle="collapse" 
+               href="#yourMusic" 
+               aria-expanded="true" 
+               aria-controls="yourMusic">
+            Minhas Músicas:
+          </div>
+          
+          <div class="collapse in" id="yourMusic">
+          
+            <a href="#" class="navigation__list__item">
+              <i class="ion-headphone"></i>
+              <span>Sons</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Albuns</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-person"></i>
+              <span>Artistas</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-document"></i>
+              <span>Arquivos Locais</span>
+            </a>
+            
+          </div>
+
+        </div>
+        <!-- / -->
+
+        <!-- Playlists -->
+        <div class="navigation__list">
+
+          <div class="navigation__list__header" 
+               role="button" 
+               data-toggle="collapse" 
+               href="#playlists" 
+               aria-expanded="true" 
+               aria-controls="playlists">
+            Playlists
+          </div>
+          
+          <div class="collapse in" id="playlists">
+          
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Doo Wop</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Top clássicos</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Músicas Amadas</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Músicas Modernas</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Novas Músicas Da Semana</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Técno Pops</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Chupetas de Verão</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Hard Rap</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Pop Rap</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Músicas 5 Estrelas</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Dope Dancin</span>
+            </a>
+
+            <a href="#" class="navigation__list__item">
+              <i class="ion-ios-musical-notes"></i>
+              <span>Sleep</span>
+            </a>
+            
+          </div>
+
+        </div>
+        <!-- / -->
+
+      </section>
+      
+    <section class="playlist">
+
+      <a href="#">
+
+        <i class="ion-ios-plus-outline"></i>
+
+        Nova Playlist:
+
+      </a>
+
+    </section>
+
+    <section class="playing">
+
+      <div class="playing__art">
+
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" />
+
+      </div>
+
+      <div class="playing__song">
+
+        <a class="playing__song__name">Papel</a>
+
+        <a class="playing__song__artist">Jason Derulo</a>
+
+      </div>
+
+      <div class="playing__add">
+
+        <i class="ion-checkmark"></i>
+
+      </div>
+
+    </section>
+    
+  </div>
+  
+  <div class="content__middle">
+  
+    <div class="artist is-verified">
+    
+      <div class="artist__header">
+      
+        <div class="artist__info">
+        
+          <div class="profile__img">
+          
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/g_eazy_propic.jpg" alt="G-Eazy" />
+            
+          </div>
+          
+          <div class="artist__info__meta">
+          
+            <div class="artist__info__type">Artist</div>
+            
+            <div class="artist__info__name">Chris Brown</div>
+            
+            <div class="artist__info__actions">
+            
+              <button class="button-dark">
+                <i class="ion-ios-play"></i>
+                Play
+              </button>
+              
+              <button class="button-light">Inscreva-se</button>
+              
+              <button class="button-light more">
+                <i class="ion-ios-more"></i>
+              </button>
+              
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        
+        <div class="artist__listeners">
+        
+          <div class="artist__listeners__count">Cachorrão</div>
+          
+          <div class="artist__listeners__label">Zeca pagodinho</div>
+          
+        </div>
+        
+        <div class="artist__navigation">
+        
+          <ul class="nav nav-tabs" role="tablist">
+            
+            <li role="presentation" class="active">
+              <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab">Overview</a>
+            </li>
+            
+            <li role="presentation">
+              <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab">Related Artists</a>
+            </li>
+            
+            <!--<li role="presentation">
+              <a href="#artist-about" aria-controls="artist-about" role="tab" data-toggle="tab">About</a>
+            </li>-->
+            
+          </ul>
+          
+          <div class="artist__navigation__friends">
+          
+            <a href="#">
+              <img src="http://zblogged.com/wp-content/uploads/2015/11/17.jpg" alt="" />
+            </a>
+            
+            <a href="#">
+              <img src="http://zblogged.com/wp-content/uploads/2015/11/5.png" alt="" />
+            </a>
+            
+            <a href="#">
+              <img src="http://cdn.devilsworkshop.org/files/2013/01/enlarged-facebook-profile-picture.jpg" alt="" />
+            </a>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div class="artist__content">
+      
+        <div class="tab-content">
+      
+          <!-- Overview -->
+          <div role="tabpanel" class="tab-pane active" id="artist-overview">
+            
+            <div class="overview">
+            
+              <div class="overview__artist">
+            
+                <!-- Latest Release-->
+                <div class="section-title">Tudo:</div>
+
+                <div class="latest-release">
+
+                  <div class="latest-release__art">
+
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg" alt="When It's Dark Out" />
+
+                  </div>
+
+                  <div class="latest-release__song">
+
+                    <div class="latest-release__song__title">Comentário da Música</div>
+
+                    <div class="latest-release__song__date">
+
+                      <span class="day">11</span>
+
+                      <span class="month">Julho</span>
+
+                      <span class="year">2023</span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- / -->
+
+                <!-- Popular-->
+                <div class="section-title">Popular</div>
+
+                <div class="tracks">
+
+                  <div class="track">
+
+                    <div class="track__art">
+
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg" alt="When It's Dark Out" />
+
+                    </div>
+
+                    <div class="track__number">1</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-checkmark-round added"></i>
+
+                    </div>
+
+                    <div class="track__title">Mundo de Papel</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">147,544,165</div>
+
+                  </div>
+
+                  <div class="track">
+
+                    <div class="track__art">
+
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg" alt="These Things Happen" />
+
+                    </div>
+
+                    <div class="track__number">2</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-plus not-added"></i>
+
+                    </div>
+
+                    <div class="track__title">Shabuia</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">74,568,782</div>
+
+                  </div>
+
+                  <div class="track">
+
+                    <div class="track__art">
+
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg" alt="When It's Dark Out" />
+
+                    </div>
+
+                    <div class="track__number">3</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-checkmark-round added"></i>
+
+                    </div>
+
+                    <div class="track__title">Capier Dien</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">13,737,506</div>
+
+                  </div>
+
+                  <div class="track">
+
+                    <div class="track__art">
+
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg" alt="When It's Dark Out" />
+
+                    </div>
+
+                    <div class="track__number">4</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-plus not-added"></i>
+
+                    </div>
+
+                    <div class="track__title">Na Movimentação</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">12,234,881</div>
+
+                  </div>
+
+                  <div class="track">
+
+                    <div class="track__art">
+
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg" alt="These Things Happen" />
+
+                    </div>
+
+                    <div class="track__number">5</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-checkmark-round added"></i>
+
+                    </div>
+
+                    <div class="track__title">Me Atraiu</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">40,882,954</div>
+
+                  </div>
+
+                </div>
+
+                <button class="show-more button-light">Show 5 More</button>
+                <!-- / -->
+              
+              </div>
+            
+              <div class="overview__related">
+
+                <div class="section-title">Related Artists</div>
+                
+                <div class="related-artists">
+                
+                  <a href="#" class="related-artist">
+                  
+                    <span class="related-artist__img">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/hoodie.jpg" alt="Hoodie Allen" />
+                      
+                    </span>
+                    
+                    <span class="related-artist__name">Manoel Gomes</span>
+                    
+                  </a>
+                  
+                  <a href="#" class="related-artist">
+                  
+                    <span class="related-artist__img">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/mikestud.jpg" alt="Mike Stud" />
+                      
+                    </span>
+                    
+                    <span class="related-artist__name">Bruna karla</span>
+                    
+                  </a>
+                  
+                  <a href="#" class="related-artist">
+                  
+                    <span class="related-artist__img">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/drake.jpeg" alt="Drake" />
+                      
+                    </span>
+                    
+                    <span class="related-artist__name">Jason Derulo</span>
+                    
+                  </a>
+                  
+                  <a href="#" class="related-artist">
+                  
+                    <span class="related-artist__img">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/jcole.jpg" alt="J. Cole" />
+                      
+                    </span>
+                    
+                    <span class="related-artist__name">Gabriela Rocha</span>
+                    
+                  </a>
+                  
+                  <a href="#" class="related-artist">
+                  
+                    <span class="related-artist__img">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/bigsean.jpg" alt="Big Sean" />
+                      
+                    </span>
+                    
+                    <span class="related-artist__name">Gabriel Diniz</span>
+                    
+                  </a>
+                  
+                  <a href="#" class="related-artist">
+                  
+                    <span class="related-artist__img">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/wiz.jpeg" alt="Wiz Khalifa" />
+                      
+                    </span>
+                    
+                    <span class="related-artist__name">Wiz Khalifa</span>
+                    
+                  </a>
+                  
+                  <a href="#" class="related-artist">
+                  
+                    <span class="related-artist__img">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/yonas.jpg" alt="Yonas" />
+                      
+                    </span>
+                    
+                    <span class="related-artist__name">Marilia Mendonça</span>
+                    
+                  </a>
+                  
+                </div>
+
+              </div>
+
+              <div class="overview__albums">
+              
+                <div class="overview__albums__head">
+                
+                  <span class="section-title">Albuns</span>
+                  
+                  <span class="view-type">
+                  
+                    <i class="fa fa-list list active"></i>
+                    
+                    <i class="fa fa-th-large card"></i>
+                    
+                  </span>
+                
+                </div>
+                
+                <div class="album">
+                
+                  <div class="album__info">
+                  
+                    <div class="album__info__art">
+                    
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg" alt="When It's Dark Out" />
+                      
+                    </div>
+                    
+                    <div class="album__info__meta">
+                    
+                      <div class="album__year">2015</div>
+                      
+                      <div class="album__name">Informática Sofrida</div>
+                      
+                      <div class="album__actions">
+                      
+                        <button class="button-light save">Salvar</button>
+                        
+                        <button class="button-light more">
+                          <i class="ion-ios-more"></i>
+                        </button>
+                        
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="album__tracks">
+                  
+                    <div class="tracks">
+                      
+                      <div class="tracks__heading">
+                      
+                        <div class="tracks__heading__number">#</div>
+                        
+                        <div class="tracks__heading__title">Sons</div>
+                        
+                        <div class="tracks__heading__length">
+                        
+                          <i class="ion-ios-stopwatch-outline"></i>
+                          
+                        </div>
+                        
+                        <div class="tracks__heading__popularity">
+                        
+                          <i class="ion-thumbsup"></i>
+                          
+                        </div>
+                        
+                      </div>
+
+                      <div class="track">
+
+                        <div class="track__number">1</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title">Work</div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">1:11</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">2</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title">Revoada no colchão</div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:00</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">3</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Caneta Azul</span>
+                          <span class="feature">Manoel</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">4:11</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">4</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Simplesmente ela</span>
+                          <span class="feature">Simples</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:20</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-down-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">5</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Scream</span>
+                          <span class="feature">Chris Brown</span>
+                          <span class="feature">Jason Derulo</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">4:33</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">6</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Amor salvo</span>
+                          <span class="feature">Salvamento</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:34</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">7</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Dandelions</span>
+                          <span class="feature">Ruth</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:29</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">8</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title">
+                        
+                          <span>Rosa de Saron</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">2:07</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">9</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-plus not-added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Intenso</span>
+                          <span class="feature">Lucas</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:11</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-down-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">10</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title">
+                        
+                          <span>Por você eu bebo o mar</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:28</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">11</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Pitbull</span>
+                          <span class="feature">Give</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">4:13</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">12</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title">
+                        
+                          <span>Dançarina</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:23</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">13</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Agora meu mundo</span>
+                          <span class="feature">Paulo André</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">3:42</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">14</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Amor de fim de noite</span>
+                          <span class="feature">Orochi</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">2:59</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">15</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Cedo ou tarde</span>
+                          <span class="feature">NX Zero</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">5:11</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">16</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Dinastia</span>
+                          <span class="feature">Miia</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">4:11</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+                      
+                      <div class="track">
+
+                        <div class="track__number">17</div>
+
+                        <div class="track__added">
+
+                          <i class="ion-checkmark-round added"></i>
+
+                        </div>
+
+                        <div class="track__title featured">
+                        
+                          <span class="title">Deus é Perfeito</span>
+                          <span class="feature">MC JOÃO</span>
+                          <span class="feature">mc lipi</span>
+                          
+                        </div>
+
+                        <div class="track__explicit">
+
+                          <span class="label">Explicit</span>
+
+                        </div>
+                        
+                        <div class="track__length">5:30</div>
+                        
+                        <div class="track__popularity">
+                        
+                          <i class="ion-arrow-graph-up-right"></i>
+                          
+                        </div>
+
+                      </div>
+
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+          
+          </div>
+          <!-- / -->
+
+          <!-- Related Artists -->
+          <div role="tabpanel" class="tab-pane" id="related-artists">
+          
+            <div class="media-cards">
+            
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://akamai.sscdn.co/uploadfile/letras/fotos/5/0/5/6/50560a82a0d9ddc8a93def52f63a9c8f.jpg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Manoel Gomes</a>
+                
+              </div>
+              
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://uploads.metropoles.com/wp-content/uploads/2023/04/13191450/Marilia-23-1024x683.jpg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Marilia Mendonça</a>
+                
+              </div>
+              
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://i.discogs.com/3C2XTVEmefo-dAqMWE5M7LDoYTPo9uNNCAiEx2YKpjw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNzgz/MzktMTY0MzQwMzky/NS01OTg4LmpwZWc.jpeg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Jason Derulo</a>
+                
+              </div>
+              
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://gospelminas.com/wp-content/uploads/2020/10/Gabriela-Rocha.jpeg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Gabriela Rocha</a>
+                
+              </div>
+              
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://akamai.sscdn.co/uploadfile/letras/fotos/e/7/a/b/e7ab67770a58d3a0d149f00e8620b831.jpg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Bruna Karla</a>
+                
+              </div>
+              
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/wiz.jpeg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Wiz Khalifa</a>
+                
+              </div>
+              
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://f.i.uol.com.br/fotografia/2019/05/27/15589774085cec1b80aa19f_1558977408_3x2_rt.jpg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Gabriel Diniz</a>
+                
+              </div>
+              
+              <div class="media-card">
+              
+                <div class="media-card__image" style="background-image: url(https://www.kboing.com.br/fotos/imagens/527b79d529b7d.jpg);">
+                
+                  <i class="ion-ios-play"></i>
+                  
+                </div>
+                
+                <a class="media-card__footer">Zeca Pagodinho</a>
+                
+              </div>
+              
+            </div>
+          
+          </div>
+          <!-- / -->
+
+          <!-- About // Coming Soon-->
+            <!--<div role="tabpanel" class="tab-pane" id="artist-about">About</div>-->
+          <!-- / -->
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="content__right">
+  
+    <div class="social">
+    
+      <div class="friends">
+      
+        <a href="#" class="friend">
+        
+          <i class="ion-android-person"></i>
+          
+          Sam Smith
+          
+        </a>
+        
+        <a href="#" class="friend">
+        
+          <i class="ion-android-person"></i>
+          
+          Tarah Forsyth
+          
+        </a>
+        
+        <a href="#" class="friend">
+        
+          <i class="ion-android-person"></i>
+          
+          Ricahrd Tomkins
+          
+        </a>
+        
+        <a href="#" class="friend">
+        
+          <i class="ion-android-person"></i>
+          
+          Tony Russo
+          
+        </a>
+        
+        <a href="#" class="friend">
+        
+          <i class="ion-android-person"></i>
+          
+          Alyssa Marist
+          
+        </a>
+        
+        <a href="#" class="friend">
+        
+          <i class="ion-android-person"></i>
+          
+          Ron Samson
+          
+        </a>
+        
+      </div>
+      
+      <button class="button-light">Find Friends</button>
+      
+    </div>
+    
+  </div>
+  
+</section>
+
+<section class="current-track">
+
+  <div class="current-track__actions">
+  
+    <a class="ion-ios-skipbackward"></a>
+    
+    <a class="ion-ios-play play"></a>
+    
+    <a class="ion-ios-skipforward"></a>
+    
+  </div>
+  
+  <div class="current-track__progress">
+  
+    <div class="current-track__progress__start">0:01</div>
+    
+    <div class="current-track__progress__bar">
+      
+      <div id="song-progress"></div>
+      
+    </div>
+    
+    <div class="current-track__progress__finish">3:07</div>
+    
+  </div>
+  
+  <div class="current-track__options">
+  
+    <a href="#" class="lyrics">Lyrics</a>
+    
+    <span class="controls">
+    
+      <a href="#" class="control">
+        <i class="ion-navicon"></i>
+      </a>
+      
+      <a href="#" class="control">
+        <i class="ion-shuffle"></i>
+      </a>
+      
+      <a href="#" class="control">
+        <i class="fa fa-refresh"></i>
+      </a>
+      
+      <a href="#" class="control devices">
+        <i class="ion-iphone"></i>
+        <span>Devices Available</span>
+      </a>
+      
+      <a href="#" class="control volume">
+        
+        <i class="ion-volume-high"></i>
+      
+        <div id="song-volume"></div>
+        
+      </a>
+      
+    </span>
+    
+  </div>
+  
+</section>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.3.0/nouislider.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
